@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 class Login extends React.Component {
@@ -21,7 +20,7 @@ class Login extends React.Component {
     
     if (response.data.status==200) 
     {
-      useNavigate("/admin/dashboard");
+      console.log("Login success!");
     }else if(response.data.status=='auth_error')
     {
       this.setState({
